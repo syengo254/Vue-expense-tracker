@@ -166,9 +166,22 @@ body {
   border-radius: 3px;
 }
 
+div.form-btns {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
 div>.btn[type="submit"] {
   position: relative;
-  background: rgb(210, 210, 210);
+  background: #9ec0ff;
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+div>.btn[type="reset"] {
+  position: relative;
+  background: gainsboro;
   width: 100px;
   margin-bottom: 1rem;
 }
@@ -241,4 +254,10 @@ div.actions>button:hover {
   font-weight: 300;
   font-size: .9rem;
   margin-left: 1rem;
+}
+
+.no-trans {
+  font-style: italic;
+  color: rgb(82, 82, 82);
+  text-align: center;
 }
