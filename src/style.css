@@ -9,3 +9,236 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: min(600px, 100%);
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  min-height: 90vh;
+}
+
+.header>h2 {
+  text-align: center;
+  font-size: 2.0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.summary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.total-bal {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: .3rem 0;
+}
+
+.summary .breakdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-block: 1rem;
+  font-weight: 500;
+}
+
+.breakdown>.income {
+  color: blue;
+}
+
+.breakdown>.income>span,
+.breakdown>.expenses>span {
+  display: block;
+  margin-bottom: .5rem;
+  color: rgb(48, 48, 48);
+  font-size: .9rem;
+}
+
+.divider.vertical {
+  border-right: 1px solid gray;
+}
+
+.breakdown>.expenses {
+  color: orangered;
+}
+
+.form {
+  position: relative;
+  /* text-align: center; */
+}
+
+.btn-types {
+  position: relative;
+  display: flex;
+  gap: .4rem;
+  justify-content: center;
+  margin-block: .5rem;
+}
+
+.btn {
+  font-family: inherit;
+  border: 1px solid grey;
+  padding: .4rem .8rem;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-types>.btn {
+  padding: .8rem 2.2rem;
+  transition: background 200ms linear;
+}
+
+.btn.income {
+  background: #116af0;
+  color: white;
+  border-color: #0649ae;
+}
+
+.btn.income:hover {
+  background: #095ad4;
+}
+
+.btn.expense {
+  background: #f04c11;
+  color: white;
+  border-color: #a63207;
+}
+
+.btn.expense:hover {
+  background: #c13908;
+}
+
+.input-form {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.input-form>form {
+  border: 1px solid rgb(225, 225, 225);
+  margin: .5rem;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.input-form>form>.form-group {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-block: 1rem;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form>form>.form-group>label {
+  font-size: 1rem;
+  display: block;
+  color: rgb(43, 43, 43);
+  width: 120px;
+  text-align: left;
+}
+
+.input-form input {
+  padding: .4rem .8rem;
+  font-family: inherit;
+  font-size: .9rem;
+  min-width: 100px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+div>.btn[type="submit"] {
+  position: relative;
+  background: rgb(210, 210, 210);
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.list-container {
+  position: relative;
+}
+
+.list-container>ul {
+  margin: 0;
+  padding: 0 .5rem;
+  list-style: none;
+  max-height: 250px;
+  overflow-y: scroll;
+  margin-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+.list-container>ul>li {
+  display: flex;
+  border: 1px solid rgb(170, 170, 170);
+  border-bottom: none;
+  padding: .4rem 1rem;
+  font-size: .9rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.list-container>ul>li:last-of-type {
+  border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.list-container>ul>li.expense-item {
+  border-left: 3px solid rgb(238, 67, 67);
+  background: #fff2ed;
+}
+
+.list-container>ul>li.income-item {
+  border-left: 3px solid rgb(76, 76, 236);
+  background: rgb(218, 218, 255);
+}
+
+div.actions {
+  flex-grow: 1;
+  text-align: right;
+}
+
+div.actions>button {
+  position: relative;
+  font-weight: bolder;
+  font-size: 1rem;
+  font-family: inherit;
+  color: white;
+  background-color: #f04c11;
+  border: 1px solid #a73004;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 200ms linear;
+}
+
+div.actions>button:hover {
+  background-color: #c13907;
+}
+
+.trans-name {
+  font-weight: 400;
+}
+
+.trans-amount {
+  font-weight: 300;
+  font-size: .9rem;
+  margin-left: 1rem;
+}
